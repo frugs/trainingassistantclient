@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 VERSION = "0.0.1"
 
@@ -12,4 +12,7 @@ setup(
     license='MIT',
     install_requires=['sc2trainingassistant', 'sc2replaynotifier'],
     classifiers=[],
+    entry_points={
+        'console_scripts': ['training-assistant=trainingassistantclient.trainingassistant:main'],
+    }
 )
